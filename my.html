@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <!-- <link rel="stylesheet" href="my.css"> -->
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 20px 0px;
+}
+.navbar ul li {
+  font-family: century;
+  font-size: 22px;
+  font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px 25px;
+    transition: all .05s ease;
+
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box box-shadow: 0 0 10px white;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 870px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("https://images.unsplash.com/photo-1498798821241-1f327af804fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 950px;
+    width: 100%;
+    z-index: -1;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+}
+.heading{
+    font-family: century;
+    font-size: 45px;
+    text-align: center;
+    margin: 25px 35px;
+    
+    
+}
+.btn{
+    padding: 20px 32px;
+    font-size: 15px;
+    background-color: #191919;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    outline: none;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 0 0 5px whitesmoke, 0 0 10px whitesmoke, 0 0 15px whitesmoke;
+    font-weight: bold;
+
+    
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    background: white;
+    color: whitesmoke;
+    
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 675px;
+    height: 400px;
+}
+.headings{
+    font-family: century;
+    font-size: 55px;
+    text-align: center;
+    margin: 25px 35px;
+    color:black;
+    letter-spacing: 4px;
+    word-spacing: 30px;
+    
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    background-color: #191919;
+}
+
+#intro h2{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: century;
+    color: whitesmoke;
+    text-align: center;
+}
+#intro p{
+    font-size: 18px;
+}
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    /* background: #191919; */
+    color: whitesmoke;
+    align-items: center;
+    padding: 20px;
+    
+}
+.headingss{
+    font-family: century;
+    font-size: 55px;
+    text-align: center;
+    margin: 25px 35px;
+    color:black;
+    letter-spacing: 4px;
+    word-spacing: 30px;
+    margin-top: -10px;
+    
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background-color: #191919;
+    height: 730px;
+}
+.gallery img{
+    width: 560px;
+    height: 300px;
+    margin-top: 24px;
+}
+#services{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: #191919;
+    
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 20px;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(to top, rgb(255,45,45) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+
+}
+.box:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(255, 45, 45);
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: white;
+    padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+    background: #000;
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+#msg{
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 10%;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About Me">About Me</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact Me">Contact Me</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="main">
+            <h1 class="heading">I AM <BR> <span style="color: orange"> DIVYANSHU GAUR</span></BR></h1>
+            <button class="btn">HIRE ME</button>
+        </div>
+    </section>
+    <section id="about">
+        <h1 class="headings">ABOUT ME</h1>
+        <div id="pic">
+            
+            <img src="https://images.unsplash.com/photo-1498798821241-1f327af804fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="">
+            <div id="intro">
+                <h2>DIVYANSHU GAUR</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nihil aliquid error impedit omnis esse incidunt, corrupti accusantium magnam laborum repudiandae commodi iusto beatae nisi ad accusamus! Placeat quidem minima, autem odit suscipit labore iusto, expedita deleniti in quasi quam? Atque, nobis, dolores ipsa veritatis sed reprehenderit repudiandae omnis, quibusdam consequatur explicabo illo minima suscipit nisi repellendus nesciunt asperiores. Cumque iste dignissimos a tempore nobis inventore quam laboriosam perspiciatis sequi?</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h1 class="headingss">PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="https://laughingsquid.com/wp-content/uploads/2013/06/work-station-straight-on-views.jpg" alt="">
+            <img src="https://www.digitalartsonline.co.uk/cmsdata/features/3641812/laptop_work_garden_lifestyle_2.jpg" alt="">
+            <img src="https://www.popphoto.com/uploads/2019/01/17/OMYVYACRLRJOGOVJPZCS4MPREA.jpg?auto=webp&width=785&height=557.35" alt="">
+            <img src="https://images.template.net/wp-content/uploads/2017/04/05134418/Portfolio-templates.jpg?width=584" alt="">
+            <img src="https://kinsta.com/wp-content/uploads/2019/10/wordpress-portfolio-plugin-1024x512.png" alt="">
+            <img src="https://dpbnri2zg3lc2.cloudfront.net/en/wp-content/uploads/2021/01/ui-portfolios-cover-image.png" alt="">
+        </div>
+    </section>
+    <section id="services">
+        <h1 class="headingss">SERVICES</h1>
+        <div class="row">
+            <div class="box">
+                <h1 class="headingss">Website Design</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi hic delectus pariatur, velit minima dignissimos cupiditate libero alias assumenda qui minus recusandae autem excepturi eligendi magnam nostrum! Quis maxime dolore ex odio perspiciatis recusandae officiis iure.</p>
+            </div>
+            <div class="box">
+                <h1 class="headingss">UX/UI Design</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi hic delectus pariatur, velit minima dignissimos cupiditate libero alias assumenda qui minus recusandae autem excepturi eligendi magnam nostrum! Quis maxime dolore ex odio perspiciatis recusandae officiis iure.</p>
+            </div>
+            <div class="box">
+                <h1 class="headingss">Digital Marketing</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi hic delectus pariatur, velit minima dignissimos cupiditate libero alias assumenda qui minus recusandae autem excepturi eligendi magnam nostrum! Quis maxime dolore ex odio perspiciatis recusandae officiis iure.</p>
+            </div>
+            <div class="box">
+                <h1 class="headingss">Vidhyamay Classes</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi hic delectus pariatur, velit minima dignissimos cupiditate libero alias assumenda qui minus recusandae autem excepturi eligendi magnam nostrum! Quis maxime dolore ex odio perspiciatis recusandae officiis iure.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="headingss">CONTACT ME</h1>
+        <form action="" class="form">
+        <input type="text" name="name" class="input" placeholder="Enter Your Name">
+        <input type="email" name="email" class="input" placeholder="Enter Your Email">
+        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+        </textarea>
+        <input type="submit" value="send" id="send">
+    </form>
+    </section>
+</body>
+</html>
